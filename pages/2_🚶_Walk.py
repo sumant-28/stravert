@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.ticker as mtick
 from matplotlib.ticker import MaxNLocator
 import altair as alt
-
+import utils
 
 d1, d2, d3 = utils.ensure_data_loaded()
 
