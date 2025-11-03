@@ -52,14 +52,14 @@ def explosion(string, df):
     output = pd.DataFrame(s2.tolist())
     return output
 
+# LOAD DATA FIRST - before set_page_config
+d1, d2, d3 = utils.ensure_data_loaded()
+
+local_tz = "Pacific/Auckland"
+
 st.set_page_config(page_title="Bike", page_icon="🚲", layout="wide")
 
 st.title("🚲 Bike")
-
-if 'd1' not in st.session_state:
-    st.error("stop")
-
-d1 = st.session_state.d1
 
 # hrr = explosion('heartRateRecovery', d1)
 # hrr = fix_all_timestamps_in_df(hrr)
