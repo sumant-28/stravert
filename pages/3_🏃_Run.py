@@ -88,11 +88,7 @@ def calculate_km_splits_from_cumulative2(cum_time, cum_dist):
                 
     return splits
 
-if 'd3' not in st.session_state:
-    st.error("stop")
-
-d3 = st.session_state.d3
-
+d1, d2, d3 = utils.ensure_data_loaded()
 
 st.set_page_config(page_title="Run", page_icon="⚙️", layout="wide")
 
