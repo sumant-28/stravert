@@ -12,7 +12,7 @@ from matplotlib.ticker import MaxNLocator
 import altair as alt
 
 
-
+d1, d2, d3 = utils.ensure_data_loaded()
 
 st.set_page_config(page_title="Walk", page_icon="🚶", layout="wide")
 
@@ -129,11 +129,6 @@ def format_pace_minutes(pace_minutes):
 #     st.stop()
 
 st.title("🚶 Walk")
-
-if 'd2' not in st.session_state:
-    st.error("stop")
-
-d2 = st.session_state.d2
 
 hrr = explosion('heartRateRecovery', d2)
 hrr = fix_all_timestamps_in_df(hrr)
