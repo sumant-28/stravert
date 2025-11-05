@@ -63,9 +63,9 @@ st.title("🚲 Bike")
 
 if len(d1) > 1:
     f = d1[d1['route'].apply(lambda x: isinstance(x, np.ndarray))]
-
-d1 = f
-
+    f = f.reset_index(drop=True)
+    d1 = f
+    
 # hrr = explosion('heartRateRecovery', d1)
 # hrr = fix_all_timestamps_in_df(hrr)
 r = explosion('route', d1)
