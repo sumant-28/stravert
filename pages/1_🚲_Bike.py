@@ -61,6 +61,11 @@ st.set_page_config(page_title="Bike", page_icon="🚲", layout="wide")
 
 st.title("🚲 Bike")
 
+if len(d1) > 1:
+    f = d1[d1['route'].apply(lambda x: isinstance(x, np.ndarray))]
+
+d1 = f
+
 # hrr = explosion('heartRateRecovery', d1)
 # hrr = fix_all_timestamps_in_df(hrr)
 r = explosion('route', d1)
