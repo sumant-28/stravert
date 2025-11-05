@@ -100,8 +100,8 @@ def explosion(string, df):
 
 st.title("🏃 Run")
 
-hrr = explosion('heartRateRecovery', d3)
-hrr = fix_all_timestamps_in_df(hrr)
+#hrr = explosion('heartRateRecovery', d3)
+#hrr = fix_all_timestamps_in_df(hrr)
 r = explosion('route', d3)
 r = fix_all_timestamps_in_df(r)
 cd = explosion('walkingAndRunningDistance', d3)
